@@ -42,35 +42,35 @@ const caseData = {
     case1: {
         tag: "Scaling & Ads",
         title: "Aura Fashion",
-        challenge: "Client was stuck at 1.5x ROAS and high CPA.",
-        strategy: "Retested creatives and scaled winning hooks.",
-        res1: "5.8x", lab1: "ROAS",
-        res2: "+$120k", lab2: "Revenue",
-        imgStore: "images/case1-store.jpg",
-        imgAds: "images/case1-ads.jpg",
-        imgSales: "images/case1-sales.jpg"
+        challenge: "Before us, Client was stuck at 1.5x ROAS and high CPA.",
+        strategy: "We have retested many creatives and scaled winning hooks.",
+        res1: "11.7x", lab1: "ROAS",
+        res2: "+$450k", lab2: "Revenue",
+        imgStore: "case1-thumb.jpg",
+        imgAds: "fb1.jpeg",
+        imgSales: "sales1.jpeg"
     },
     case2: {
         tag: "Store Dev",
-        title: "Lumière Skin",
-        challenge: "Store was slow and had a 1.2% conversion rate.",
-        strategy: "Custom Shopify theme and mobile optimization.",
+        title: "Beautify Skincare",
+        challenge: "The Store was slow and had a 1.2% conversion rate.",
+        strategy: "We made custom Shopify theme and mobile optimization and then scale it by testing different creatives.",
         res1: "4.5%", lab1: "Conv. Rate",
-        res2: "3.2x", lab2: "ROI",
-        imgStore: "images/case2-store.jpg",
-        imgAds: "images/case2-ads.jpg",
-        imgSales: "images/case2-sales.jpg"
+        res2: "7.9x", lab2: "ROI",
+        imgStore: "case2-thumb.jpg",
+        imgAds: "fb2.jpeg",
+        imgSales: "sales2.jpeg"
     },
     case3: {
         tag: "Full Scale",
-        title: "Vogue Interiors",
-        challenge: "Scaling issues beyond $10k/month spend.",
-        strategy: "Broad targeting and UGC ad focus.",
-        res1: "4.1x", lab1: "ROAS",
+        title: "Naturya Interiors",
+        challenge: "They are facing scaling issues beyond $10k/month spend.",
+        strategy: "We have do broad targeting and UGC ad focus.",
+        res1: "9.5x", lab1: "ROAS",
         res2: "35%", lab2: "CPA Reduction",
-        imgStore: "images/case3-store.jpg",
-        imgAds: "images/case3-ads.jpg",
-        imgSales: "images/case3-sales.jpg"
+        imgStore: "case3-thumb.jpg",
+        imgAds: "fb3.jpeg",
+        imgSales: "sales3.jpeg"
     }
 };
 
