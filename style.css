@@ -1287,89 +1287,7 @@ nav.scrolled {
     }
 }
 
-/* TESTIMONIALS */
-.testimonials-section {
-    padding: 120px 64px;
-}
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
-    margin-top: 80px;
-}
-
-.testimonial-card {
-    background: var(--black);
-    padding: 44px 40px;
-    position: relative;
-    transition: background 0.3s;
-}
-
-.testimonial-card:hover {
-    background: var(--deep);
-}
-
-.testimonial-card::before {
-    content: '\201C';
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 80px;
-    color: var(--gold-dim);
-    line-height: 0.8;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.testimonial-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
-    font-weight: 300;
-    font-style: italic;
-    line-height: 1.6;
-    color: var(--white);
-    margin-bottom: 28px;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--border-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--gold);
-}
-
-.author-name {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--white);
-    margin-bottom: 2px;
-}
-
-.author-role {
-    font-size: 11px;
-    color: var(--muted2);
-    letter-spacing: 0.5px;
-}
-
-.stars {
-    color: var(--gold);
-    font-size: 12px;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
 
 /* PRICING SECTION */
 .pricing-section {
@@ -2013,5 +1931,163 @@ footer {
     .cta-title {
         font-size: 42px;
         /* Slightly smaller title for small screens */
+    }
+}
+
+/* --- 1. SECTION LAYOUT --- */
+.testimonials-section {
+    padding: 100px 0;
+    background: #000000;
+    overflow: hidden;
+    /* Zaroori hai taaki marquee screen se bahar na jaye */
+}
+
+/* --- 2. MARQUEE CONTAINER --- */
+.testimonials-marquee {
+    width: 100%;
+    margin-top: 60px;
+    position: relative;
+    cursor: default;
+    /* Side Fades: Taaki cards side se gayeb hote nazar aayein (Premium Look) */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 30px;
+    /* Cards ke darmiyan fasla */
+    animation: testimonial-scroll 70s linear infinite;
+    /* Bohat sukoon se chalay ga */
+    align-items: stretch;
+    /* Saare cards ki height ek jaisi rakhega */
+    will-change: transform;
+}
+
+/* Pause on hover taaki log sukoon se parh sakein */
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+/* --- 3. TESTIMONIAL CARD (Fixed Size Fix) --- */
+.testimonial-card {
+    width: 500px;
+    /* Card ki width barha di hai taaki text fit aaye */
+    min-height: 350px;
+    height: auto;
+    background: #0a0a0a;
+    /* Deep Black */
+    padding: 50px 45px;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    /* Light Gold Border */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    white-space: normal;
+    /* Text ko box ke andar wrap karega */
+}
+
+.testimonial-card:hover {
+    border-color: #c9a84c;
+    /* Solid Gold on hover */
+    background: #0f0f0f;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* --- 4. TYPOGRAPHY (The Realistic Look) --- */
+.testimonial-card::before {
+    content: '\201C';
+    /* Large Quote Mark */
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    color: rgba(201, 168, 76, 0.3);
+    line-height: 0.1;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.testimonial-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    /* Readable and Elegant */
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 40px;
+    flex-grow: 1;
+    /* Text area ko space expand karne dega */
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid rgba(201, 168, 76, 0.1);
+    padding-top: 25px;
+}
+
+.author-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #c9a84c;
+    font-size: 18px;
+}
+
+.author-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.author-role {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- 5. ANIMATION KEYFRAMES --- */
+@keyframes testimonial-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* Half track transition for infinite loop */
+}
+
+/* --- 6. MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 320px;
+        /* Mobile par width adjust */
+        padding: 35px 25px;
+        min-height: 300px;
+    }
+
+    .testimonial-text {
+        font-size: 18px;
+    }
+
+    .marquee-track {
+        gap: 20px;
+        animation-duration: 45s;
+        /* Mobile par thora tez zaroori hai */
     }
 }
